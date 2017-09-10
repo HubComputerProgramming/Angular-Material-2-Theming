@@ -1,0 +1,43 @@
+<div [class]="theme" >
+  <md-sidenav-container>
+    <md-toolbar color="primary">
+      <button md-icon-button>
+        <md-icon>menu</md-icon>
+      </button>
+
+      <span>Angular Material 2</span>
+
+      <span class="material-space"></span>
+
+      <button md-icon-button>
+        <md-icon>person</md-icon>
+      </button>
+      <button md-icon-button>
+        <md-icon>more_vert</md-icon>
+      </button>
+    </md-toolbar>
+    <div style="text-align:center">
+      <h1>
+        Welcome to {{title}}!
+      </h1>
+      <md-card>
+        <button md-raised-button color="primary">Primary</button>
+        <button md-raised-button color="accent">Accent</button>
+        <button md-raised-button color="warn">Warn</button>
+        <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+      </md-card>
+
+      <br/>
+
+      <md-card>
+        <md-select placeholder="Theme" [(ngModel)]="theme" (change)="onThemeChange()">
+          <md-option value="my-theme">my theme</md-option>
+          <md-option value="my-light-theme">my secondary theme</md-option>
+          <md-option value="my-dark-theme">my third theme</md-option>
+        </md-select>
+      </md-card>
+
+    </div>
+
+  </md-sidenav-container>
+</div>
